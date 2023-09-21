@@ -14,7 +14,7 @@ curl --silent --show-error --location --fail --retry 3 --output /tmp/chromedrive
 echo "ChromeDriver $CHROMEDRIVER_VERSION 下载完毕" 
 cd /tmp
 # 解压缩对应的 ChromeDriver
-unzip /chromedriver-linux64.zip 
+unzip chromedriver-linux64.zip 
 echo "ChromeDriver $CHROMEDRIVER_VERSION 解压完毕" 
 ls
 # 删除下载的临时文件
