@@ -4,18 +4,18 @@ on:
   workflow_dispatch:
 
 jobs:
-  one:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJSON(github)}}
-        run: echo "$GITHUB_CONTEXT"
+      # - name: Dump GitHub context
+      #   env:
+      #     GITHUB_CONTEXT: ${{ toJSON(github)}}
+      #   run: echo "$GITHUB_CONTEXT"
         
-      - name: Dump runner context
-        env:
-          RUNNER_CONTEXT: ${{ runner.temp }}
-        run: echo "$RUNNER_CONTEXT"
+      # - name: Dump runner context
+      #   env:
+      #     RUNNER_CONTEXT: ${{ runner.temp }}
+      #   run: echo "$RUNNER_CONTEXT"
         
       - name: 安装 ChromeDriver
         run: bash <(curl -s -S -L https://raw.githubusercontent.com/jflmao/Install_the_ChromeDriver_in_Actions/main/for_linux.sh)
