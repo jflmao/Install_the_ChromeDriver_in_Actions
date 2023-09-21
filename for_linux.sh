@@ -10,7 +10,7 @@ CHROMEDRIVER_VERSION=$(cat /tmp/LATEST_RELEASE_${CHROME_VERSION}.txt)
 echo "** 当前支持的 ChromeDriver 版本号为: $CHROMEDRIVER_VERSION" 
 
 # 下载对应的 ChromeDriver 压缩包到临时目录 /tmp
-echo "** 开始下载 ChromeDriver $CHROMEDRIVER_VERSION" 
+echo "** 开始下载 ChromeDriver $CHROMEDRIVER_VERSION 压缩包" 
 curl --silent --show-error --location --fail --retry 3 --output /tmp/chromedriver-linux64.zip "https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/$CHROMEDRIVER_VERSION/linux64/chromedriver-linux64.zip" 
 
 cd /tmp
