@@ -28,7 +28,7 @@ sudo mv chromedriver-linux64 /usr/local/bin/chromedriver
 
 echo "给 ChromeDriver 二进制文件添加执行权限" 
 sudo chmod +x /usr/local/bin/chromedriver 
-
+ls
 # 显示当前安装的 ChromeDriver 的版本号
 chromedriver --version
             
