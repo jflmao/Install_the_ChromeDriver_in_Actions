@@ -11,9 +11,14 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJSON(github)}}
         run: echo "$GITHUB_CONTEXT"
+        
       - name: Dump runner context
         env:
           RUNNER_CONTEXT: ${{ runner.temp }}
         run: echo "$RUNNER_CONTEXT"
+
+      - name: 拉取代码
+        uses: actions/checkout@v3
+        
       - name: 安装 ChromeDriver
         run: bash for_linux.sh
