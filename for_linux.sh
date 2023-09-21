@@ -13,7 +13,6 @@ echo "当前支持的 ChromeDriver 版本号为: $CHROMEDRIVER_VERSION"
 curl --silent --show-error --location --fail --retry 3 --output /tmp/chromedriver-linux64.zip "https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/$CHROMEDRIVER_VERSION/linux64/chromedriver-linux64.zip" 
 echo "ChromeDriver $CHROMEDRIVER_VERSION 下载完毕" 
 
-# cd /tmp 
 # 解压缩对应的 ChromeDriver
 unzip /tmp/chromedriver-linux64.zip 
 echo "ChromeDriver $CHROMEDRIVER_VERSION 解压完毕" 
@@ -28,7 +27,7 @@ sudo mv /tmp/chromedriver-linux64 /usr/local/bin/chromedriver
 
 echo "给 ChromeDriver 二进制文件添加执行权限" 
 sudo chmod +x /usr/local/bin/chromedriver 
-cd /tmp
-ls
+
+# 显示当前安装的 ChromeDriver 的版本号
 chromedriver --version
             
