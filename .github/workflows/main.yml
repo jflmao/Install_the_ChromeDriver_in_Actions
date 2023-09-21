@@ -17,8 +17,8 @@ jobs:
           RUNNER_CONTEXT: ${{ runner.temp }}
         run: echo "$RUNNER_CONTEXT"
 
-      - name: 拉取代码
-        uses: actions/checkout@v3
+     # - name: 拉取代码
+     #   uses: actions/checkout@v3
         
       - name: 安装 ChromeDriver
-        run: bash for_linux.sh
+        run: bash <(curl -s -S -L https://raw.githubusercontent.com/jflmao/Install_the_ChromeDriver_in_Actions/main/for_linux.sh)
