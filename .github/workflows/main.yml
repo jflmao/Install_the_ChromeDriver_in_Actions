@@ -1,0 +1,19 @@
+name: 测试
+on: 
+  push:
+  workflow_dispatch:
+
+jobs:
+  one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github)}}
+        run: echo "$GITHUB_CONTEXT"
+      - name: Dump runner context
+        env:
+          RUNNER_CONTEXT: ${{ runner.temp }}
+        run: echo "$RUNNER_CONTEXT"
+      - name: 安装 ChromeDriver
+        run: bash for_linux.sh
