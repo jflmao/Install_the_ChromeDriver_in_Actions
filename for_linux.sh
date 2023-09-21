@@ -21,7 +21,7 @@ echo "ChromeDriver $CHROMEDRIVER_VERSION 解压完毕"
 rm -rf /tmp/LATEST_RELEASE_${CHROME_VERSION}.txt
 rm -rf /tmp/chromedriver-linux64.zip 
 echo "删除临时文件完毕" 
-
+ls
 echo "把 ChromeDriver 二进制文件移动到用户可执行目录" 
 cd /tmp
 sudo mv chromedriver-linux64 /usr/local/bin/chromedriver 
