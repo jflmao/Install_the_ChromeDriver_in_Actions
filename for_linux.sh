@@ -23,7 +23,8 @@ rm -rf /tmp/chromedriver-linux64.zip
 echo "删除临时文件完毕" 
 
 echo "把 ChromeDriver 二进制文件移动到用户可执行目录" 
-sudo mv /tmp/chromedriver-linux64 /usr/local/bin/chromedriver 
+cd /tmp
+sudo mv chromedriver-linux64 /usr/local/bin/chromedriver 
 
 echo "给 ChromeDriver 二进制文件添加执行权限" 
 sudo chmod +x /usr/local/bin/chromedriver 
